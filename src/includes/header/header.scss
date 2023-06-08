@@ -1,4 +1,53 @@
 .header {
 	padding: 20px 0;
-	background: #ccc;
+	border-bottom: 1px solid #cfcfcf;
+	display: flex;
+	max-width: 1640px;
+	margin: auto;
+	justify-content: space-between;
+	padding: 26px 30px 23px;
+	box-sizing: content-box;
+
+	&__right {
+		display: flex;
+		align-items: center;
+		position: relative;
+		&-img {
+			margin-left: 26px;
+
+			&_burger {
+				display: none;
+			}
+		}
+		&-badge {
+			border-radius: 50%;
+			font-size: 10px;
+			background: #3366ff;
+			color: #fff;
+			margin-left: -7px;
+			margin-bottom: 17px;
+			width: 13px;
+			height: 13px;
+			display: flex;
+			justify-content: center;
+		}
+	}
+}
+
+@media all and (max-width: 768px) {
+	.header {
+		&__right {
+			&-img {
+				&_burger {
+					display: block;
+				}
+			}
+		}
+	}
+}
+
+@media all and (max-width: 400px) {
+	.header {
+		padding: 26px 10px 23px;
+	}
 }

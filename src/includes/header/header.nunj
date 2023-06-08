@@ -1,7 +1,10 @@
-{% from "../../components/menu/menu.nunj" import menu %}
-
 <div class="header">
-	<div class="container">
-		{{ menu() }}
+	<img src={% inline 'logo.png' %} alt="logo" />
+	<div class="header__right">
+		<img class="header__right-img" src={% inline 'search.svg' %} alt="search" /> <img src={% inline
+		'cart.svg' %} alt="cart" class="header__right-img" />
+
+		<span class="header__right-badge"> 2 </span><img src={% inline 'burger.svg' %} alt="burger-btn"
+		class="header__right-img header__right-img_burger"/>
 	</div>
 </div>
