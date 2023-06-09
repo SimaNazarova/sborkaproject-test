@@ -7,24 +7,28 @@ title %}Home / {{ super() }}{% endblock title %} #} {% block content %} {% inclu
 <div class="container">
 	<div class="payment">
 		<div class="payment__scale">
-			<div class="steps">
-				<div class="payment__scale-count">1</div>
-				<div class="payment__scale-count">2</div>
-				<div class="payment__scale-count current">3</div>
-				<div class="payment__scale-count next">4</div>
-			</div>
-
-			<div class="titles">
-				<span class="payment__scale-label">Account</span>
-				<span class="payment__scale-label">Shipping</span>
-				<span class="payment__scale-label">Billing</span>
-				<span class="payment__scale-label">Review</span>
-			</div>
-			<div class="progress-bar">
-				<span class="indicator"></span>
-			</div>
+			<ul class="payment__scale-list">
+				<li class="payment__scale-item">
+					<span class="payment__scale-count">1</span>
+					<span class="payment__scale-label">Account</span>
+				</li>
+				<li class="payment__scale-item">
+					<span class="payment__scale-count">2</span>
+					<span class="payment__scale-label">Shipping</span>
+				</li>
+				<li class="payment__scale-item payment__scale-count_next">
+					<span class="payment__scale-count">3</span>
+					<span class="payment__scale-label">Billing</span>
+				</li>
+				<li class="payment__scale-item payment__scale-count_pale">
+					<span class="payment__scale-count">4</span>
+					<span class="payment__scale-label">Review</span>
+				</li>
+				<div class="progress-bar">
+					<span class="indicator"></span>
+				</div>
+			</ul>
 		</div>
-
 		{#
 		<div class="billing">
 			<p class="billing__title">Billing Information</p>
