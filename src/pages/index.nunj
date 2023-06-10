@@ -29,32 +29,14 @@ title %}Home / {{ super() }}{% endblock title %} #} {% block content %} {% inclu
 			<p class="payment__title">Billing Information</p>
 
 			<fieldset class="payment__radio-fieldset">
-				<input
-					class="payment__radio-input"
-					type="radio"
-					id="card"
-					name="type of payment"
-					value="card"
-					checked
-				/>
-				<label
-					class="payment__radio-label"
-					for="card
-				"
-					>Pay with Credit Card</label
+				<label class="payment__radio-label">
+					<input name="method" class="payment__radio-input" type="radio" value="card" checked />
+					<span class="payment__fake-radio"></span><span> Pay with Credit card</span></label
 				>
-				<input
-					class="payment__radio-input"
-					type="radio"
-					id="paypal"
-					name="type of payment"
-					value="paypal"
-				/>
-				<label
-					class="payment__radio-label"
-					for="paypal
-				"
-					><img src={% inline 'paypal.svg' %} alt="search" />
+
+				<label class="payment__radio-label">
+					<input name="method" class="payment__radio-input" type="radio" value="paypal" />
+					<span class="payment__fake-radio"></span>
 				</label>
 			</fieldset>
 
@@ -127,17 +109,19 @@ title %}Home / {{ super() }}{% endblock title %} #} {% block content %} {% inclu
 			</div>
 
 			<fieldset class="payment__fieldset-checkbox">
-				<input type="checkbox" id="save-info" name="save information" checked />
-				<label class="payment__checkbox-label" for="save information"
-					>Save information of this credit card</label
-				>
-			</fieldset>
+				<label class="payment__checkbox-label">
+					<input class="payment__checkbox-input" type="checkbox" name="save information" checked />
+					<span class="payment__fake-checkbox"></span>
+					<span>Save information of this credit card</span>
+				</label>
 
-			<fieldset class="payment__fieldset-checkbox">
-				<input class="" type="checkbox" id="terms and comditions" name="save information" />
-				<label class="payment__checkbox-label" for="terms and conditions"
-					>I accept the <a class="payment__checkbox-link" href="#">terms and conditions</a> and the
-					<a class="payment__checkbox-link" href="#">Privacy Policies</a></label
+				<label class="payment__checkbox-label">
+					<input class="payment__checkbox-input" type="checkbox" name="save information" />
+					<span class="payment__fake-checkbox"></span>
+					<span>
+						I accept the <a class="payment__checkbox-link" href="#">terms and conditions</a> and the
+						<a class="payment__checkbox-link" href="#">Privacy Policies</a>
+					</span></label
 				>
 			</fieldset>
 			<div class="payment__btn-container">

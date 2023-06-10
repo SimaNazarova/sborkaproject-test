@@ -115,27 +115,77 @@
 
 	&__radio-fieldset {
 		margin-top: 43px;
-	}
-
-	&__radio-input:last-of-type {
-		margin-left: 88px;
+		position: relative;
+		display: flex;
 	}
 
 	&__radio-label {
+		gap: 9px;
+		display: inline-block;
+		margin-left: 0;
+		display: flex;
 		font-family: 'Roboto';
 		font-style: normal;
 		font-weight: 400;
 		font-size: 14px;
-		line-height: 16px;
-		margin-left: 5px;
+	}
+
+	&__radio-input {
+		display: none;
+	}
+
+	&__fake-radio {
+		display: inline-block;
+		width: 18px;
+		height: 18px;
+		border: 1px solid #cfcfcf;
+		cursor: pointer;
+		border-radius: 50%;
+		position: relative;
+		flex-shrink: 0;
+	}
+
+	&__fake-radio::before {
+		content: '';
+		position: absolute;
+		display: block;
+		width: 8px;
+		height: 8px;
+		background-color: #3366ff;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		opacity: 0;
+		border-radius: 50%;
+		transition: 0.2s;
 	}
 
 	&__radio-label:last-of-type {
-		margin-left: -12px;
-		margin-top: -5px;
-		width: 85px;
-		display: inline-block;
+		margin-left: 88px;
+		background-image: inline('paypal.svg');
+		background-size: contain;
+		background-repeat: no-repeat;
+
+		height: 23px;
+		width: 119px;
+		background-position: right;
 	}
+
+	// &__radio-label {
+	// 	font-family: 'Roboto';
+	// 	font-style: normal;
+	// 	font-weight: 400;
+	// 	font-size: 14px;
+	// 	line-height: 16px;
+	// 	margin-left: 5px;
+	// }
+
+	// &__radio-label:last-of-type {
+	// 	margin-left: -12px;
+	// 	margin-top: -5px;
+	// 	width: 85px;
+	// 	display: inline-block;
+	// }
 
 	&__card {
 		max-width: 550px;
@@ -199,9 +249,9 @@
 	}
 	&__fieldset-checkbox {
 		margin-top: 43px;
-	}
-	&__fieldset-checkbox:last-of-type {
-		margin-top: 7px;
+		display: flex;
+		flex-direction: column;
+		gap: 12px;
 	}
 
 	&__checkbox-label {
@@ -211,6 +261,37 @@
 		font-size: 14px;
 		line-height: 16px;
 		color: #8c8c8c;
+		display: flex;
+		align-items: center;
+		gap: 8px;
+	}
+
+	&__fake-checkbox {
+		display: inline-block;
+		width: 18px;
+		height: 18px;
+		border: 1px solid #cfcfcf;
+		position: relative;
+		cursor: pointer;
+		flex-shrink: 0;
+	}
+
+	&__fake-checkbox::before {
+		content: '';
+		position: absolute;
+		display: block;
+		width: 8px;
+		height: 8px;
+		background-color: #3366ff;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		opacity: 0;
+		transition: 0.2s;
+	}
+
+	&__checkbox-input {
+		display: none;
 	}
 
 	&__checkbox-link {
@@ -248,7 +329,6 @@
 		display: flex;
 		justify-content: space-between;
 		margin-top: 39px;
-		cursor: pointer;
 	}
 }
 
@@ -270,6 +350,14 @@
 	width: 67%;
 	background: #4070f4;
 	transition: all 300ms ease;
+}
+
+.payment__checkbox-input:checked + .payment__fake-checkbox::before {
+	opacity: 1;
+}
+
+.payment__radio-input:checked + .payment__fake-radio::before {
+	opacity: 1;
 }
 
 .basket {
@@ -308,7 +396,8 @@
 
 @media all and (max-width: 630px) {
 	.payment {
-		padding: 0 16px 0 10px;
+		padding: 0 10px 0 10px;
+		box-sizing: border-box;
 		&__scale {
 			max-width: 90%;
 			margin-left: auto;
@@ -318,8 +407,9 @@
 			margin-top: 20px;
 		}
 
-		&__radio-input:last-of-type {
-			margin-left: -13px;
+		&__radio-label:last-of-type {
+			margin-left: 16px;
+			width: 113px;
 		}
 
 		&__card {
@@ -328,6 +418,7 @@
 			max-width: 299px;
 			padding: 0;
 			margin: 0;
+			margin-top: 24px;
 			&-input {
 				padding: 0;
 				&_short {
