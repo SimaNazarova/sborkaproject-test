@@ -7,156 +7,144 @@ title %}Home / {{ super() }}{% endblock title %} #} {% block content %} {% inclu
 <div class="container">
 	<div class="payment">
 		<div class="payment__scale">
-			<div class="steps">
+			<div class="payment__steps">
 				<div class="payment__scale-count">1</div>
 				<div class="payment__scale-count">2</div>
-				<div class="payment__scale-count current">3</div>
-				<div class="payment__scale-count next">4</div>
+				<div class="payment__scale-count payment__scale-count_current">3</div>
+				<div class="payment__scale-count payment__scale-count_next">4</div>
 			</div>
 
-			<div class="titles">
+			<div class="payment__titles">
 				<span class="payment__scale-label">Account</span>
 				<span class="payment__scale-label">Shipping</span>
-				<span class="payment__scale-label">Billing</span>
+				<span class="payment__scale-label">payment</span>
 				<span class="payment__scale-label">Review</span>
 			</div>
-			<div class="progress-bar">
+			<div class="payment__progress-bar">
 				<span class="indicator"></span>
 			</div>
 		</div>
 
-		{#
-		<div class="billing">
-			<p class="billing__title">Billing Information</p>
-			<form action="submit">
-				<fieldset class="billing__radio-fieldset">
+		<div class="payment__container">
+			<p class="payment__title">Billing Information</p>
+
+			<fieldset class="payment__radio-fieldset">
+				<input
+					class="payment__radio-input"
+					type="radio"
+					id="card"
+					name="type of payment"
+					value="card"
+					checked
+				/>
+				<label
+					class="payment__radio-label"
+					for="card
+				"
+					>Pay with Credit Card</label
+				>
+				<input
+					class="payment__radio-input"
+					type="radio"
+					id="paypal"
+					name="type of payment"
+					value="paypal"
+				/>
+				<label
+					class="payment__radio-label"
+					for="paypal
+				"
+					><img src={% inline 'paypal.svg' %} alt="search" />
+				</label>
+			</fieldset>
+
+			<div class="payment__card">
+				<fieldset class="payment__fieldset">
+					<label class="payment__card-label" for="name">Name on card</label>
 					<input
-						class="billing__radio-input"
-						type="radio"
-						id="card"
-						name="type of payment"
-						value="card"
-						checked
+						class="payment__card-input"
+						name="name"
+						type="text"
+						placeholder="Placeholder Text"
 					/>
-					<label
-						class="billing__radio-label"
-						for="card
-					"
-						>Pay with Credit Card</label
-					>
-					<input
-						class="billing__radio-input"
-						type="radio"
-						id="paypal"
-						name="type of payment"
-						value="paypal"
-					/>
-					<label
-						class="billing__radio-label"
-						for="paypal
-					"
-						><img class="header__right-img" src={% inline 'paypal.svg' %} alt="search" />
-					</label>
 				</fieldset>
 
-				<div class="billing__card">
-					<fieldset class="billing__fieldset">
-						<label class="billing__card-label" for="name">Name on card</label>
+				<fieldset class="payment__fieldset">
+					<label class="payment__card-label" for="card number">Card Number</label>
+					<div class="payment__fieldset-container">
 						<input
-							class="billing__card-input"
-							name="name"
+							class="payment__card-input payment__card-input_short"
+							name="card number"
 							type="text"
-							placeholder="Placeholder Text"
+							maxlength="4"
+						/>
+						<input
+							class="payment__card-input payment__card-input_short"
+							name="card number"
+							type="text"
+							maxlength="4"
+						/>
+						<input
+							class="payment__card-input payment__card-input_short"
+							name="card number"
+							type="text"
+							maxlength="4"
+						/>
+						<input
+							class="payment__card-input payment__card-input_short"
+							class="payment__card-input"
+							name="card number"
+							type="text"
+							maxlength="4"
+						/>
+					</div>
+				</fieldset>
+				<div class="payment__fieldset-container payment__fieldset-container_">
+					<fieldset class="payment__fieldset">
+						<label class="payment__card-label" for="data">Expire date</label>
+						<input
+							class="payment__card-input payment__card-input_short"
+							class="payment__card-input"
+							name="card number"
+							type="text"
+							pattern="\d*"
+							maxlength="4"
 						/>
 					</fieldset>
-					<fieldset class="billing__fieldset">
-						<label class="billing__card-label" for="card number">Card Number</label>
-						<div class="billing__fieldset-container">
-							<input
-								class="billing__card-input billing__card-input_short"
-								name="card number"
-								type="text"
-								pattern="\d*"
-								maxlength="4"
-							/>
-							<input
-								class="billing__card-input billing__card-input_short"
-								name="card number"
-								type="text"
-								pattern="\d*"
-								maxlength="4"
-							/>
-							<input
-								class="billing__card-input billing__card-input_short"
-								name="card number"
-								type="text"
-								pattern="\d*"
-								maxlength="4"
-							/>
-							<input
-								class="billing__card-input billing__card-input_short"
-								class="billing__card-input"
-								name="card number"
-								type="text"
-								pattern="\d*"
-								maxlength="4"
-							/>
-						</div>
+					<fieldset class="payment__fieldset">
+						<label class="payment__card-label" for="data">CVV code</label>
+						<span class="payment__card-question"> ? </span>
+						<input
+							class="payment__card-input payment__card-input_short"
+							class="payment__card-input"
+							name="card number"
+							type="text"
+							pattern="\d*"
+							maxlength="4"
+						/>
 					</fieldset>
-					<div class="test">
-						<fieldset class="billing__fieldset">
-							<label class="billing__card-label" for="data">Expire date</label>
-							<input
-								class="billing__card-input billing__card-input_short"
-								class="billing__card-input"
-								name="card number"
-								type="text"
-								pattern="\d*"
-								maxlength="4"
-							/>
-						</fieldset>
-						<fieldset class="billing__fieldset">
-							<label class="billing__card-label" for="data">CVV code</label>
-							<input
-								class="billing__card-input billing__card-input_short"
-								class="billing__card-input"
-								name="card number"
-								type="text"
-								pattern="\d*"
-								maxlength="4"
-							/>
-						</fieldset>
-					</div>
 				</div>
-				<fieldset class="billing__radio-fieldset">
-					<input
-						class="billing__card-input"
-						type="checkbox"
-						id="save-info"
-						name="save information"
-						checked
-					/>
-					<label class="billing__card-label" for="save information"
-						>Save information of this credit card</label
-					>
+			</div>
 
-					<input
-						class="billing__card-input"
-						type="checkbox"
-						id="terms and comditions"
-						name="save information"
-					/>
-					<label class="billing__card-label" for="terms and comditions"
-						>I accept the terms and comditions and the Privacy Policies</label
-					>
-				</fieldset>
-				<div class="billing__container">
-					<button class="billing__btn billing__btn_white">Back</button>
-					<button class="billing__btn billing__btn_blue">Check out</button>
-				</div>
-			</form>
+			<fieldset class="payment__fieldset-checkbox">
+				<input type="checkbox" id="save-info" name="save information" checked />
+				<label class="payment__checkbox-label" for="save information"
+					>Save information of this credit card</label
+				>
+			</fieldset>
+
+			<fieldset class="payment__fieldset-checkbox">
+				<input class="" type="checkbox" id="terms and comditions" name="save information" />
+				<label class="payment__checkbox-label" for="terms and conditions"
+					>I accept the <a class="payment__checkbox-link" href="#">terms and conditions</a> and the
+					<a class="payment__checkbox-link" href="#">Privacy Policies</a></label
+				>
+			</fieldset>
+			<div class="payment__btn-container">
+				<button class="payment__btn payment__btn_white">Back</button>
+				<button class="payment__btn payment__btn_blue">Check out</button>
+			</div>
 		</div>
-		#}
 	</div>
 	<div class="basket"></div>
 </div>

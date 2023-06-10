@@ -29,7 +29,7 @@ title %}Home / {{ super() }}{% endblock title %} #} {% block content %} {% inclu
 				</div>
 			</ul>
 		</div>
-		{#
+
 		<div class="billing">
 			<p class="billing__title">Billing Information</p>
 			<form action="submit">
@@ -160,7 +160,6 @@ title %}Home / {{ super() }}{% endblock title %} #} {% block content %} {% inclu
 				</div>
 			</form>
 		</div>
-		#}
 	</div>
 	<div class="basket"></div>
 </div>
