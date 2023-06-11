@@ -216,6 +216,9 @@
 			&_short {
 				width: 100px;
 			}
+			&_medium {
+				width: 225px;
+			}
 		}
 		&-question {
 			border-radius: 50%;
@@ -300,26 +303,24 @@
 	}
 
 	&__btn {
-		height: 41px;
+		padding: 8px 30px;
 		border-radius: 3px;
 		font-family: 'Roboto';
 		font-style: normal;
 		font-weight: 400;
 		font-size: 14px;
 		line-height: 24px;
-		display: block;
+		display: inline-block;
 		margin: 0;
 		cursor: pointer;
 
 		&_white {
-			width: 91px;
 			background: #ffffff;
 			border: 1px solid #cfcfcf;
 		}
 
 		&_blue {
 			background: #3366ff;
-			width: 125px;
 			color: white;
 			border: none;
 		}
@@ -358,14 +359,6 @@
 
 .payment__radio-input:checked + .payment__fake-radio::before {
 	opacity: 1;
-}
-
-.basket {
-	width: 410px;
-
-	background-color: brown;
-	height: 100vh;
-	flex-shrink: 0;
 }
 
 @media all and (max-width: 1350px) {
@@ -437,4 +430,117 @@
 			}
 		}
 	}
+}
+
+.basket {
+	width: 410px;
+	height: 100vh;
+	flex-shrink: 0;
+	border-left: 1px solid #cfcfcf;
+
+	box-sizing: border-box;
+
+	&__container {
+		padding: 40px;
+	}
+	&__title {
+		font-family: 'Roboto';
+		font-style: normal;
+		font-weight: 700;
+		font-size: 18px;
+		line-height: 21px;
+	}
+
+	&__list {
+		margin-top: 30px;
+	}
+
+	&__item {
+		display: flex;
+		width: 100%;
+		font-family: 'Roboto';
+		font-style: normal;
+		font-weight: 400;
+		font-size: 14px;
+		line-height: 16px;
+		margin-bottom: 40px;
+	}
+
+	&__item:last-of-type {
+		margin-bottom: 0px;
+	}
+
+	&__item-center {
+		max-width: 150px;
+		margin-left: 11px;
+		margin-top: 1px;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+
+	&__btn-container {
+		display: flex;
+		align-items: center;
+		max-width: 143px;
+		gap: 17px;
+		margin-bottom: 33px;
+	}
+
+	&__item-price {
+		margin-left: auto;
+	}
+
+	// &__btn-container:last-child {
+	// 	margin-right: 1px;
+	// }
+
+	&__btn {
+		border: none;
+		background-color: transparent;
+
+		&_delete {
+			height: 18px;
+			width: 18px;
+			margin-left: auto;
+		}
+	}
+
+	&__promo {
+		border-top: 1px solid #cfcfcf;
+		border-bottom: 1px solid #cfcfcf;
+		width: 100%;
+		padding: 40px;
+		box-sizing: border-box;
+	}
+
+	&__label {
+		font-family: 'Roboto';
+		font-style: normal;
+		font-weight: 700;
+		font-size: 18px;
+		line-height: 21px;
+		// width: 100%;
+		display: block;
+		margin-bottom: 30px;
+	}
+
+	&__price {
+		padding: 40px;
+	}
+
+	&__price-item {
+		display: flex;
+		font-family: 'Roboto';
+		font-style: normal;
+		font-weight: 400;
+		font-size: 14px;
+		line-height: 34px;
+		justify-content: space-between;
+	}
+}
+
+.test {
+	display: flex;
+	justify-content: space-between;
 }
