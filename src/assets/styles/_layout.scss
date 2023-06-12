@@ -32,59 +32,55 @@
 		position: relative;
 		padding: 0;
 		width: 100%;
-		&-list {
-			position: relative;
-			list-style-type: none;
-			display: flex;
-			position: relative;
-			z-index: 10;
+	}
 
-			width: 100%;
-		}
+	&__scale-list {
+		position: relative;
+		list-style-type: none;
+		display: flex;
+		position: relative;
+		z-index: 10;
+		width: 100%;
+	}
 
-		&-item {
-			flex-basis: 0;
-			-webkit-box-flex: 1;
-			-ms-flex-positive: 1;
-			flex-grow: 1;
-			width: 100%;
-			display: flex;
-			flex-direction: column;
-			min-width: 43px;
-			max-width: 301px;
-			position: relative;
-		}
+	&__scale-item {
+		flex-basis: 0;
+		-webkit-box-flex: 1;
+		-ms-flex-positive: 1;
+		flex-grow: 1;
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		min-width: 43px;
+		max-width: 301px;
+		position: relative;
+	}
 
-		&-count {
-			font-family: 'Roboto';
-			height: 18px;
-			width: 18px;
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			border-radius: 50%;
-			font-weight: 500;
-			font-size: 10px;
-			margin: 0;
-			position: relative;
-			z-index: 10;
-			color: #ffff;
-			background: #3366ff;
-		}
+	&__scale-count {
+		height: 18px;
+		width: 18px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		border-radius: 50%;
+		font-weight: 500;
+		font-size: 10px;
+		margin: 0;
+		position: relative;
+		z-index: 10;
+		color: #ffff;
+		background: #3366ff;
+	}
 
-		&-label {
-			font-family: 'Roboto';
-			font-style: normal;
-			font-weight: 400;
-			font-size: 14px;
-			line-height: 16px;
-			margin-left: -15px;
-		}
+	&__scale-label {
+		font-size: 14px;
+		line-height: 16px;
+		margin-left: -15px;
+	}
 
-		&-label:last-child {
-			margin-left: 0;
-			margin-right: -14px;
-		}
+	&__scale-label:last-child {
+		margin-left: 0;
+		margin-right: -14px;
 	}
 	&__progress-bar {
 		top: 8px;
@@ -105,8 +101,6 @@
 	}
 
 	&__title {
-		font-family: 'Roboto';
-		font-style: normal;
 		font-weight: 700;
 		font-size: 18px;
 		line-height: 21px;
@@ -124,9 +118,6 @@
 		display: inline-block;
 		margin-left: 0;
 		display: flex;
-		font-family: 'Roboto';
-		font-style: normal;
-		font-weight: 400;
 		font-size: 14px;
 	}
 
@@ -171,22 +162,6 @@
 		background-position: right;
 	}
 
-	// &__radio-label {
-	// 	font-family: 'Roboto';
-	// 	font-style: normal;
-	// 	font-weight: 400;
-	// 	font-size: 14px;
-	// 	line-height: 16px;
-	// 	margin-left: 5px;
-	// }
-
-	// &__radio-label:last-of-type {
-	// 	margin-left: -12px;
-	// 	margin-top: -5px;
-	// 	width: 85px;
-	// 	display: inline-block;
-	// }
-
 	&__card {
 		max-width: 550px;
 		background: #ffffff;
@@ -197,47 +172,39 @@
 		margin-left: -30px;
 		padding: 20px 30px;
 		box-sizing: border-box;
+	}
 
-		&-label {
-			font-family: 'Roboto';
-			font-style: normal;
-			font-weight: 500;
-			font-size: 12px;
-			line-height: 24px;
-		}
+	&__card-label {
+		font-weight: 500;
+		font-size: 12px;
+		line-height: 24px;
+	}
 
-		&-input {
-			background: #ededf1;
-			border-radius: 3px;
-			border: none;
-			height: 40px;
-			padding-left: 12px;
+	&__card-input {
+		background: #ededf1;
+		border-radius: 3px;
+		border: none;
+		height: 40px;
+		padding-left: 12px;
 
-			&_short {
-				width: 100px;
-			}
-			&_medium {
-				width: 225px;
-			}
+		&_short {
+			width: 100px;
 		}
-		&-question {
-			border-radius: 50%;
-			background: #dbdbdb;
-			width: 13px;
-			height: 13px;
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			font-family: 'Roboto';
-			font-style: normal;
-			font-weight: 400;
-			font-size: 10px;
-			line-height: 150%;
-			position: absolute;
-			top: 6px;
-			right: 30px;
-			cursor: pointer;
-		}
+	}
+	&__card-question {
+		border-radius: 50%;
+		background: #dbdbdb;
+		width: 13px;
+		height: 13px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		font-size: 10px;
+		line-height: 150%;
+		position: absolute;
+		top: 6px;
+		right: 30px;
+		cursor: pointer;
 	}
 
 	&__fieldset {
@@ -258,9 +225,6 @@
 	}
 
 	&__checkbox-label {
-		font-family: 'Roboto';
-		font-style: normal;
-		font-weight: 400;
 		font-size: 14px;
 		line-height: 16px;
 		color: #8c8c8c;
@@ -302,30 +266,6 @@
 		color: black;
 	}
 
-	&__btn {
-		padding: 8px 30px;
-		border-radius: 3px;
-		font-family: 'Roboto';
-		font-style: normal;
-		font-weight: 400;
-		font-size: 14px;
-		line-height: 24px;
-		display: inline-block;
-		margin: 0;
-		cursor: pointer;
-
-		&_white {
-			background: #ffffff;
-			border: 1px solid #cfcfcf;
-		}
-
-		&_blue {
-			background: #3366ff;
-			color: white;
-			border: none;
-		}
-	}
-
 	&__btn-container {
 		display: flex;
 		justify-content: space-between;
@@ -345,7 +285,7 @@
 	color: black;
 }
 
-.payment__progress-bar .indicator {
+.payment__progress-bar .payment__indicator {
 	position: absolute;
 	height: 1px;
 	width: 67%;
@@ -418,10 +358,10 @@
 					width: 68px;
 				}
 			}
-			&-question {
-				top: 6px;
-				right: 0px;
-			}
+		}
+		&__card-question {
+			top: 6px;
+			right: 0px;
 		}
 		&__fieldset {
 			&-container {

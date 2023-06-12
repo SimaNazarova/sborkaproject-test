@@ -1,8 +1,7 @@
 {% extends "../templates/base.nunj" %} {% from "../components/button/button.nunj" import button %}
-{% from "../components/icon/icon.nunj" import icon %} {# Пример расширения существующего блока #} {#
-Например можно использовать для добавления уникальных тайтлов для каждой страницы #} {# {% block
-title %}Home / {{ super() }}{% endblock title %} #} {% block content %} {% include
-'../includes/header/header.nunj' %}
+{# Пример расширения существующего блока #} {# Например можно использовать для добавления уникальных
+тайтлов для каждой страницы #} {# {% block title %}Home / {{ super() }}{% endblock title %} #} {%
+block content %} {% include '../includes/header/header.nunj' %}
 
 <div class="container">
 	<div class="payment">
@@ -17,16 +16,16 @@ title %}Home / {{ super() }}{% endblock title %} #} {% block content %} {% inclu
 			<div class="payment__titles">
 				<span class="payment__scale-label">Account</span>
 				<span class="payment__scale-label">Shipping</span>
-				<span class="payment__scale-label">payment</span>
+				<span class="payment__scale-label">Billing</span>
 				<span class="payment__scale-label">Review</span>
 			</div>
 			<div class="payment__progress-bar">
-				<span class="indicator"></span>
+				<span class="payment__indicator"></span>
 			</div>
 		</div>
 
 		<div class="payment__container">
-			<p class="payment__title">Billing Information</p>
+			<h3 class="payment__title">Billing Information</h3>
 
 			<fieldset class="payment__radio-fieldset">
 				<label class="payment__radio-label">
@@ -48,6 +47,7 @@ title %}Home / {{ super() }}{% endblock title %} #} {% block content %} {% inclu
 						name="name"
 						type="text"
 						placeholder="Placeholder Text"
+						maxlength="50"
 					/>
 				</fieldset>
 
@@ -81,7 +81,7 @@ title %}Home / {{ super() }}{% endblock title %} #} {% block content %} {% inclu
 						/>
 					</div>
 				</fieldset>
-				<div class="payment__fieldset-container payment__fieldset-container_">
+				<div class="payment__fieldset-container">
 					<fieldset class="payment__fieldset">
 						<label class="payment__card-label" for="data">Expire date</label>
 						<input
@@ -90,7 +90,7 @@ title %}Home / {{ super() }}{% endblock title %} #} {% block content %} {% inclu
 							name="card number"
 							type="text"
 							pattern="\d*"
-							maxlength="4"
+							maxlength="5"
 						/>
 					</fieldset>
 					<fieldset class="payment__fieldset">
@@ -102,7 +102,7 @@ title %}Home / {{ super() }}{% endblock title %} #} {% block content %} {% inclu
 							name="card number"
 							type="text"
 							pattern="\d*"
-							maxlength="4"
+							maxlength="3"
 						/>
 					</fieldset>
 				</div>
@@ -125,8 +125,19 @@ title %}Home / {{ super() }}{% endblock title %} #} {% block content %} {% inclu
 				>
 			</fieldset>
 			<div class="payment__btn-container">
-				<button class="payment__btn payment__btn_white">Back</button>
-				<button class="payment__btn payment__btn_blue">Check out</button>
+				{{
+					button({
+						className: 'button_white',
+						children: 'Back'
+					})
+				}}
+
+				{{
+					button({
+						className: 'button_blue',
+						children: 'Check out'
+					})
+				}}
 			</div>
 		</div>
 	</div>
