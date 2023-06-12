@@ -1,26 +1,16 @@
 {
-	"menuItems": [
+	"basket": [
 		{
-			"name": "Menu Item 1",
-			"path": "#"
+			"name": "Amet minim mollit non deserunt ullamco est sit",
+			"price": 525,
+			"quantity": 1,
+			"img": "jacket.png"
 		},
 		{
-			"name": "Menu Item 2",
-			"path": "#"
-		},
-		{
-			"name": "Menu Item 3",
-			"path": "#"
-		}
-	],
-	"someData": [
-		{
-			"title": "Item 1",
-			"text": "Desc 1"
-		},
-		{
-			"title": "Item 2",
-			"text": "Desc 2"
+			"name": "Amet minim mollit non",
+			"price": 525,
+			"quantity": 1,
+			"img": "sneaker.png"
 		}
 	]
 }
