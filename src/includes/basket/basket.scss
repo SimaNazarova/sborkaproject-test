@@ -31,7 +31,7 @@
 	}
 
 	&__item-center {
-		max-width: 150px;
+		max-width: 153px;
 		margin-left: 11px;
 		margin-top: 1px;
 		display: flex;
@@ -42,13 +42,13 @@
 	&__btn-container {
 		display: flex;
 		align-items: center;
-		max-width: 143px;
+		max-width: 153px;
 		gap: 17px;
 		margin-bottom: 33px;
 	}
 
 	&__item-price {
-		margin-left: auto;
+		margin-right: auto;
 	}
 
 	&__btn {
@@ -74,7 +74,7 @@
 			height: 20px;
 			width: 21px;
 			background-size: contain;
-			background: inline('minus-btn.svg');
+			background: inline('plus-btn.svg');
 		}
 	}
 
