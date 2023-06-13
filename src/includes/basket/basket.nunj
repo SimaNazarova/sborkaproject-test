@@ -31,11 +31,9 @@
 			<p>Shipping</p>
 			<p id="shipping"></p>
 		</div>
-		<div class="basket__price-item">
-			<p><strong>Total</strong></p>
-			<p>
-				<strong id="total"></strong>
-			</p>
+		<div class="basket__price-item basket__price-item_total">
+			<p>Total</p>
+			<p id="total"></p>
 		</div>
 	</div>
 
@@ -51,8 +49,7 @@
 					<span class="basket__item-price">$</span>
 				</div>
 			</div>
-			<button class="basket__btn basket__btn_delete">
-			</button>
+			<button class="basket__btn basket__btn_delete"></button>
 		</li>
 	</template>
 </section>

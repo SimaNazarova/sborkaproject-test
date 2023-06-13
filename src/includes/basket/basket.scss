@@ -51,6 +51,18 @@
 		margin-right: auto;
 	}
 
+	&__price-item {
+		display: flex;
+		font-size: 14px;
+		line-height: 34px;
+		justify-content: space-between;
+		&_total {
+			font-size: 18px;
+			line-height: 34px;
+			font-weight: 700;
+		}
+	}
+
 	&__btn {
 		border: none;
 		background-color: transparent;
@@ -98,13 +110,6 @@
 
 	&__price {
 		padding: 40px;
-	}
-
-	&__price-item {
-		display: flex;
-		font-size: 14px;
-		line-height: 34px;
-		justify-content: space-between;
 	}
 
 	&__input-container {
