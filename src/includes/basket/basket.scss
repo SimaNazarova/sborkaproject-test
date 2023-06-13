@@ -67,14 +67,16 @@
 			height: 20px;
 			width: 21px;
 			background-size: contain;
-			background: inline('plus-btn.svg');
+			background-image: inline('plus-btn.svg');
+			background-repeat: no-repeat;
 		}
 
 		&_minus {
 			height: 20px;
 			width: 21px;
 			background-size: contain;
-			background: inline('plus-btn.svg');
+			background-image: inline('plus-btn.svg');
+			background-repeat: no-repeat;
 		}
 	}
 
