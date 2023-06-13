@@ -3,39 +3,12 @@
 <section class="basket">
 	<div class="basket__container">
 		<h3 class="basket__title">My basket</h3>
-		<ul class="basket__list">
-			{% for item in basket %}
-			<li class="basket__item">
-				<img class="basket__item-img" src="{{ item.img }}" alt="product-img" />
-				<div class="basket__item-center">
-					<p class="basket__item-title">{{ item.name }}</p>
-					<div class="basket__btn-container">
-						<button class="basket__btn">
-							<img src={% inline 'minus-btn.svg' %} alt="minus-btn" />
-						</button>
-						<span>1</span>
-						<button class="basket__btn">
-							<img src={% inline 'plus-btn.svg' %} alt="plus-btn" />
-						</button>
-						<span class="basket__item-price">${{ item.price }}</span>
-					</div>
-				</div>
-				<button class="basket__btn basket__btn_delete">
-					<img src={% inline 'delete.svg' %} alt="delete" />
-				</button>
-			</li>
-			{% endfor %}
-		</ul>
+		<ul class="basket__list"></ul>
 	</div>
 	<div class="basket__promo">
 		<label class="basket__label" for="promo code">Promo code</label>
 		<div class="basket__input-container">
-			<input
-				class="basket__input"
-				placeholder="Placeholder Text"
-				type="text"
-				maxlength="20"
-			/>
+			<input class="basket__input" placeholder="Placeholder Text" type="text" maxlength="20" />
 
 			{{
 				button({
@@ -48,21 +21,38 @@
 	<div class="basket__price">
 		<div class="basket__price-item">
 			<p>Subtotal</p>
-			<p>$1 050</p>
+			<p id="subtotal"></p>
 		</div>
 		<div class="basket__price-item">
 			<p>Tax</p>
-			<p>$100</p>
+			<p id="tax"></p>
 		</div>
 		<div class="basket__price-item">
 			<p>Shipping</p>
-			<p>$150</p>
+			<p id="shipping"></p>
 		</div>
 		<div class="basket__price-item">
 			<p><strong>Total</strong></p>
 			<p>
-				<strong>$ 1300</strong>
+				<strong id="total"></strong>
 			</p>
 		</div>
 	</div>
+
+	<template id="basket-item-template">
+		<li class="basket__item">
+			<img class="basket__item-img" alt="product-img" />
+			<div class="basket__item-center">
+				<p class="basket__item-title"></p>
+				<div class="basket__btn-container">
+					<button id="btn-minus" class="basket__btn basket__btn_minus"></button>
+					<span class="basket__item-quantity"></span>
+					<button class="basket__btn basket__btn_plus"></button>
+					<span class="basket__item-price">$</span>
+				</div>
+			</div>
+			<button class="basket__btn basket__btn_delete">
+			</button>
+		</li>
+	</template>
 </section>

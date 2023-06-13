@@ -33,6 +33,9 @@
 		height: 13px;
 		display: flex;
 		justify-content: center;
+		&_inactive {
+			display: none;
+		}
 	}
 }
 

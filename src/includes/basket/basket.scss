@@ -1,6 +1,5 @@
 .basket {
 	width: 410px;
-	height: 100vh;
 	flex-shrink: 0;
 	border-left: 1px solid #cfcfcf;
 
@@ -61,6 +60,21 @@
 			height: 18px;
 			width: 18px;
 			margin-left: auto;
+			background: inline('delete.svg');
+		}
+
+		&_plus {
+			height: 20px;
+			width: 21px;
+			background-size: contain;
+			background: inline('plus-btn.svg');
+		}
+
+		&_minus {
+			height: 20px;
+			width: 21px;
+			background-size: contain;
+			background: inline('minus-btn.svg');
 		}
 	}
 
