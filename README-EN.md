@@ -1,4 +1,4 @@
-# SP.Starter
+
 
 **Quick start project template**
 
